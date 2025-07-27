@@ -15,6 +15,8 @@ def prompt_input():
         placeholder="Type your question or prompt here..."
     )
     
+    print("session id:", st.session_state.session_id)
+
     # Trigger on submit
     if st.button("Submit Question", type="primary") and user_prompt:
         with st.spinner("Getting AI response..."):
@@ -40,6 +42,8 @@ def prompt_input():
             st.session_state.ai_response = response_data.get("ai_response")
             st.session_state.prompt_text = user_prompt
 
+            print("prompt id:", st.session_state.prompt_id)
+
             # Display output
             # st.markdown("---")
             # st.markdown("### Your Prompt")
@@ -52,9 +56,9 @@ def prompt_input():
     
     # If previous response exists, show it
     elif st.session_state.get("prompt_text") and st.session_state.get("ai_response"):
-        st.markdown("---")
-        st.markdown("### Your Prompt")
-        st.write(st.session_state.prompt_text)
+        # st.markdown("---")
+        # st.markdown("### Your Prompt")
+        # st.write(st.session_state.prompt_text)
 
         st.markdown("### AI Response")
         st.write(st.session_state.ai_response)

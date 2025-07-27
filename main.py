@@ -25,9 +25,6 @@ def load_session_id():
         return response.json()["id"]
     raise RuntimeError("Failed to create new session.")
 
-# Always start with a new session on load
-st.session_state.session_id = load_session_id()
-
 if "session_id" not in st.session_state:
     st.session_state.session_id = load_session_id()
 
@@ -95,9 +92,9 @@ col1, col2, col3 = st.columns([2, 2, 0.5])
 
 with col1:
     if st.session_state.step > 1:
-        if st.button("Go Back", type="secondary"):
-            st.session_state.step -= 1
-            st.rerun()
+        if st.button("🔄 Finish & Restart", type="primary"):
+                st.session_state.clear()
+                st.rerun()
 
 with col2:
     # Empty column for spacing
@@ -107,11 +104,11 @@ with col3:
     if st.session_state.step < 6:
         # Dynamic button text based on current step
         next_step_names = {
-            1: "Move to Bias Analysis",
-            2: "Move to Cross Exam", 
-            3: "Move to Reframe Perspective",
-            4: "Move to Human Override",
-            5: "Move to Session Report"
+            1: "➡️ Bias Analysis",
+            2: "➡️ Cross Exam", 
+            3: "➡️ Reframe Perspective",
+            4: "➡️ Human Override",
+            5: "➡️ Session Report"
         }
         button_text = next_step_names.get(st.session_state.step, "Continue")
         

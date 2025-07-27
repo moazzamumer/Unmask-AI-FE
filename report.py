@@ -7,6 +7,9 @@ API_BASE_URL = "https://unmask-ai-production.up.railway.app"
 
 def session_report():
     """Download the session bias report as a PDF from the backend."""
+
+    print("session id:", st.session_state.session_id)
+    print("prompt id:", st.session_state.session_id)
     
     st.write("📄 **Generate Session Bias Report**")
     st.caption(" ### Download a comprehensive PDF of all prompts, biases, perspectives, and overrides from this session.")

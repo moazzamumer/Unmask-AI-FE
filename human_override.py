@@ -7,6 +7,9 @@ API_BASE_URL = "https://unmask-ai-production.up.railway.app"
 
 def human_override():
     """Allow users to provide their own human-corrected response."""
+
+    print("session id:", st.session_state.session_id)
+    print("prompt id:", st.session_state.session_id)
     
     prompt_id = st.session_state.get("prompt_id")
     ai_response = st.session_state.get("ai_response")

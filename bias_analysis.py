@@ -9,6 +9,9 @@ API_BASE_URL = "https://unmask-ai-production.up.railway.app"
 
 def bias_analysis():
     """Perform bias analysis based on the AI response."""
+
+    print("session id:", st.session_state.session_id)
+    print("prompt id:", st.session_state.prompt_id)
     
     # Load required values from session state
     prompt_id = st.session_state.get("prompt_id")
@@ -39,7 +42,7 @@ def bias_analysis():
     if bias_data:
         st.success("✅ The following biases were detected in the AI response:")
         for bias in bias_data:
-            st.markdown(f"**{bias['category']} Bias** — Score: `{bias['score']}`")
+            st.markdown(f" #### **{bias['category']} Bias** — Score: `{bias['score']}`")
             st.write(bias["insight_summary"])
             st.markdown("---")
     else:

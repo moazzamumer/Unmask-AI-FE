@@ -7,6 +7,9 @@ API_BASE_URL = "https://unmask-ai-production.up.railway.app"
 
 def reframe_perspective():
     """Allow users to request a reframed perspective from the AI."""
+
+    print("session id:", st.session_state.session_id)
+    print("prompt id:", st.session_state.session_id)
     
     prompt_id = st.session_state.get("prompt_id")
     

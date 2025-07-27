@@ -7,6 +7,9 @@ API_BASE_URL = "https://unmask-ai-production.up.railway.app"
 
 def cross_exam():
     """Chat-based follow-up questions interface."""
+
+    print("session id:", st.session_state.session_id)
+    print("prompt id:", st.session_state.prompt_id)
     
     prompt_id = st.session_state.get("prompt_id")
     
@@ -15,7 +18,7 @@ def cross_exam():
         st.info("💡 The chat feature requires an initial AI response to be generated.")
         return
 
-    st.write("💬 **Chat with AI** — Ask follow-up questions for clarification or deeper insights.")
+    st.write(" ### 💬 **Chat with AI** — Ask follow-up questions for clarification or deeper insights.")
 
     # Initialize chat history
     if "cross_exam_messages" not in st.session_state:
