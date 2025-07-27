@@ -2,24 +2,25 @@
 
 **Unmask AI** is an interactive bias analysis lab that allows users to explore, interrogate, and reframe AI-generated content. This frontend is built using **Streamlit** and provides a clean, step-by-step interface for analyzing outputs from large language models (LLMs).
 
-> 💡 Powered by GPT-4o and designed for human-first insight, Unmask AI puts you back in control of the narrative.
+> 💡 Powered by GPT and designed for human-first insight, Unmask AI puts you back in control of the narrative.
 
 ---
 
 ## 📁 Directory Structure
 
+```plaintext
 moazzamumer-unmask-ai-fe/
-├── README.md # Project documentation
-├── main.py # Streamlit app entry point
-├── prompt_input.py # Step 1: Prompt input + AI response
-├── bias_analysis.py # Step 2: Detect biases in AI response
-├── cross_exam.py # Step 3: Cross-examine the AI
-├── reframe_perspective.py # Step 4: Generate alternative perspectives
-├── human_override.py # Step 5: Submit human-corrected responses
-├── report.py # Step 6: Generate PDF session report
-└── session_id.txt # Local session tracking (optional)
+├── README.md                # Project documentation
+├── main.py                 # Streamlit app entry point
+├── prompt_input.py         # Step 1: Prompt input + AI response
+├── bias_analysis.py        # Step 2: Detect biases in AI response
+├── cross_exam.py           # Step 3: Cross-examine the AI
+├── reframe_perspective.py  # Step 4: Generate alternative perspectives
+├── human_override.py       # Step 5: Submit human-corrected responses
+├── report.py               # Step 6: Generate PDF session report
+└── session_id.txt          # Local session tracking (optional)
 └── requirementstxt # 
-
+```
 ---
 
 ## 🚀 Features
